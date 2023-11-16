@@ -99,7 +99,7 @@ const RegistrationForm = () => {
         />
       </Form.Group>
 
-      <Button variant="dark" type="submit">
+      <Button variant="danger" type="submit">
         Registrarse
       </Button>
     </Form>

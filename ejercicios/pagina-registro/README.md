@@ -4,12 +4,17 @@
 
 Ejercicios utilizando las siguientes tecnologías y estructuras:
 
-- Proyecto creado con Vite
+- Proyecto creado con
+  ![Vite](./public/vite.svg)
 - Archivo principal: `App.jsx`
 - Estilado con React-bootstrap, el cual tiene verdaderos componentes de React creados desde cero. La biblioteca es compatible con el núcleo de Bootstrap.
   **Click en el Logo para ver componenetes**
 
-<p align="left"> <a href="https://react-bootstrap.netlify.app/docs/components/accordion" target="_blank" rel="noreferrer"> <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ffreesvg.org%2Flogo-1674520932&psig=AOvVaw0c8O0SUEf5EcRQbBku1Oq2&ust=1700175321538000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIikpuOMx4IDFQAAAAAdAAAAABAE" alt="bootstrap" width="40" height="40"/> </a> </p>
+<p align="left"> <a href="https://react-bootstrap.netlify.app/docs/components/accordion" target="_blank" rel="noreferrer"> </a>
+
+![React-bootstrap](./public/reactBoo.webp)
+
+</p>
 
 ### Requisitos previos
 
@@ -24,7 +29,7 @@ Antes de comenzar, asegurarse de tener instalado Node.js en la máquina. Para ve
 1.  Abrir la terminal y navegar hasta el directorio en el que desean clonar el proyecto:
 
 ```
-    git clone https://github.com/CrysG011/EquipoQ.git
+    git clone https://github.com/CrysG011/EquipoQ/tree/master/ejercicios/pagina-registro
 ```
 
 2.  Entrar al directorio del proyecto:
