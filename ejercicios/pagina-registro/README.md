@@ -5,15 +5,17 @@
 Ejercicios utilizando las siguientes tecnologías y estructuras:
 
 - Proyecto creado con
+
   ![Vite](./public/vite.svg)
+
 - Archivo principal: `App.jsx`
 - Estilado con React-bootstrap, el cual tiene verdaderos componentes de React creados desde cero. La biblioteca es compatible con el núcleo de Bootstrap.
   **Click en el Logo para ver componenetes**
 
-<p align="left"> <a href="https://react-bootstrap.netlify.app/docs/components/accordion" target="_blank" rel="noreferrer"> </a>
-
-![React-bootstrap](./public/reactBoo.webp)
-
+<p align="center">
+  <a href="https://react-bootstrap.netlify.app/docs/components/accordion" target="_blank" rel="noreferrer">
+    <img src="./public/ReactBoots.png" alt="React-bootstrap" width="150">
+  </a>
 </p>
 
 ### Requisitos previos
