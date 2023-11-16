@@ -4,7 +4,7 @@
 
 Ejercicios utilizando las siguientes tecnologías y estructuras:
 
-- Proyecto creado con
+- Proyecto creado con Vite
 
   ![Vite](./public/vite.svg)
 
