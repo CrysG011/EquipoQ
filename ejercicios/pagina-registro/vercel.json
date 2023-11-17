@@ -1,11 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "ejercicios/pagina-registro",
-      "use": "@vercel/static-build"
-    }
-  ],
   "routes": [
     {
       "src": "/(.*)",
