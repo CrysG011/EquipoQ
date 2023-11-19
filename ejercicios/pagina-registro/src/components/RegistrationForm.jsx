@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form, Button, Container, Row, Col, Image } from "react-bootstrap";
-import ImgFormAlt from '../assets/form2.svg';
+import ImgFormAlt from "../assets/form2.svg";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -75,7 +75,7 @@ const RegistrationForm = () => {
 
             <Form.Group className="mb-3" controlId="phone">
               <Form.Label>Teléfono</Form.Label>
-              <Form.Control 
+              <Form.Control
                 type="tel"
                 placeholder="Ingrese su teléfono"
                 name="phone"
@@ -88,33 +88,36 @@ const RegistrationForm = () => {
             <Row className="mb-3">
               <Form.Group as={Col} controlId="password">
                 <Form.Label>Password</Form.Label>
-                <Form.Control 
+                <Form.Control
                   type="password"
                   placeholder="Ingrese su contraseña"
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  required  
+                  required
                 />
               </Form.Group>
 
               <Form.Group as={Col} controlId="confirmPassword">
                 <Form.Label>Confirmar Password</Form.Label>
-                <Form.Control 
+                <Form.Control
                   type="password"
                   placeholder="Confirme su contraseña"
                   name="confirmPassword"
                   value={formData.confirmPassword}
                   onChange={handleChange}
-                  required  
+                  required
                 />
               </Form.Group>
             </Row>
 
-            <Button variant="outline-primary" className="w-100 mt-2" type="submit">
-                Registrarse
+            <Button
+              variant="outline-primary"
+              className="w-100 mt-2"
+              type="submit"
+            >
+              Registrarse
             </Button>
-
           </Form>
         </Col>
       </Row>
