@@ -14,28 +14,6 @@ const RegistrationForm = () => {
 
   console.log(errors);
 
-  // const [formData, setFormData] = useState({
-  //   firstName: "",
-  //   lastName: "",
-  //   email: "",
-  //   phone: "",
-  //   password: "",
-  //   confirmPassword: "",
-  // });
-
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData({
-  //     ...formData,
-  //     [name]: value,
-  //   });
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log("Formulario enviado:", formData);
-  // };
-
   const onSubmit = handleSubmit((data) => {
     console.log(data);
     alert("Formulario enviado correctamente");
@@ -43,17 +21,17 @@ const RegistrationForm = () => {
   });
 
   return (
-    <Container className="m-auto border rounded shadow bg-white p-5">
+    <Container
+      className="m-auto border rounded shadow bg-white p-5"
+      data-testid="registration-form"
+    >
       <Row>
         <Col sm={4} className="d-flex">
           <Image src={ImgFormAlt} className="mx-auto d-block w-100 " />
         </Col>
 
         <Col sm={8}>
-          <Form
-            // onSubmit={handleSubmit}
-            onSubmit={onSubmit}
-          >
+          <Form onSubmit={onSubmit}>
             <Row className="mb-3">
               <Form.Group as={Col} controlId="firstName">
                 <Form.Label>Nombre</Form.Label>
@@ -61,9 +39,6 @@ const RegistrationForm = () => {
                   type="text"
                   placeholder="Ingrese su nombre"
                   name="firstName"
-                  // value={formData.firstName}
-                  // onChange={handleChange}
-                  //required
                   autoFocus
                   {...register("firstName", {
                     required: {
@@ -81,7 +56,7 @@ const RegistrationForm = () => {
                   })}
                 />
                 {errors.firstName && (
-                  <span className="text-danger">
+                  <span className="text-danger fw-bold">
                     {errors.firstName.message}
                   </span>
                 )}
@@ -93,9 +68,6 @@ const RegistrationForm = () => {
                   type="text"
                   placeholder="Ingrese su apellido"
                   name="lastName"
-                  // value={formData.lastName}
-                  // onChange={handleChange}
-                  //required
                   {...register("lastName", {
                     required: {
                       value: true,
@@ -112,7 +84,9 @@ const RegistrationForm = () => {
                   })}
                 />
                 {errors.lastName && (
-                  <span className="text-danger">{errors.lastName.message}</span>
+                  <span className="text-danger fw-bold">
+                    {errors.lastName.message}
+                  </span>
                 )}
               </Form.Group>
             </Row>
@@ -123,9 +97,6 @@ const RegistrationForm = () => {
                 type="email"
                 placeholder="Ingrese su email"
                 name="email"
-                // value={formData.email}
-                // onChange={handleChange}
-                //required
                 {...register("email", {
                   required: {
                     value: true,
@@ -133,12 +104,14 @@ const RegistrationForm = () => {
                   },
                   pattern: {
                     value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                    message: "Correo no válido",
+                    message: "Formato de correo no válido",
                   },
                 })}
               />
-              {errors.email && (
-                <span className="text-danger">{errors.email.message}</span>
+              {errors.email?.type === "pattern" && (
+                <span className="text-danger fw-bold">
+                  {errors.email.message}
+                </span>
               )}
             </Form.Group>
 
@@ -148,13 +121,10 @@ const RegistrationForm = () => {
                 type="tel"
                 placeholder="Ingrese su teléfono"
                 name="phone"
-                // value={formData.phone}
-                // onChange={handleChange}
-                //required
                 {...register("phone", {
                   required: {
                     value: true,
-                    message: "El teléfono es requerida",
+                    message: "El teléfono es requerido",
                   },
                   minLength: {
                     value: 6,
@@ -164,10 +134,16 @@ const RegistrationForm = () => {
                     value: 10,
                     message: "El teléfono debe tener máximo 10 números",
                   },
+                  pattern: {
+                    value: /^[0-9]+$/,
+                    message: "El teléfono debe contener solo números",
+                  },
                 })}
               />
               {errors.phone && (
-                <span className="text-danger">{errors.phone.message}</span>
+                <span className="text-danger fw-bold">
+                  {errors.phone.message}
+                </span>
               )}
             </Form.Group>
 
@@ -178,9 +154,6 @@ const RegistrationForm = () => {
                   type="password"
                   placeholder="Ingrese su contraseña"
                   name="password"
-                  // value={formData.password}
-                  // onChange={handleChange}
-                  //required
                   {...register("password", {
                     required: {
                       value: true,
@@ -193,7 +166,9 @@ const RegistrationForm = () => {
                   })}
                 />
                 {errors.password && (
-                  <span className="text-danger">{errors.password.message}</span>
+                  <span className="text-danger fw-bold">
+                    {errors.password.message}
+                  </span>
                 )}
               </Form.Group>
 
@@ -203,9 +178,6 @@ const RegistrationForm = () => {
                   type="password"
                   placeholder="Confirme su contraseña"
                   name="confirmPassword"
-                  // value={formData.confirmPassword}
-                  // onChange={handleChange}
-                  //required
                   {...register("confirmPassword", {
                     required: {
                       value: true,
@@ -217,7 +189,7 @@ const RegistrationForm = () => {
                   })}
                 />
                 {errors.confirmPassword && (
-                  <span className="text-danger">
+                  <span className="text-danger fw-bold">
                     {errors.confirmPassword.message}
                   </span>
                 )}
@@ -226,7 +198,7 @@ const RegistrationForm = () => {
 
             <Button
               variant="outline-primary"
-              className="w-100 mt-2"
+              className="w-100 mt-2 fw-bold"
               type="submit"
             >
               Registrarse
