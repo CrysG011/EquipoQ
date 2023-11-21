@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+iconify-icon{
+  display: inline-block;
+  margin-left: 1em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+iconify-icon:hover{
+  color:#00398f;
+}
+
+.card-body .list-group li{
+  border-left: 4px solid #0d6efd;
+}
