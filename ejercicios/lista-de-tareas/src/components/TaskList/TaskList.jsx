@@ -1,18 +1,22 @@
-import TaskItem from "../TaskItem/TaskItem"
+import TaskItem from "../TaskItem/TaskItem";
 
-export default function TaskList() {
-    return (
-        <>
-            <div className="card-body">
-                <ul className="list-group">
-                    <TaskItem />
-                    <TaskItem />
-                    <TaskItem />
-                    <TaskItem />
-                    <TaskItem />
-                    <TaskItem />
-                </ul>
-            </div>
-        </>
-    )
-}
+const TaskList = ({ tasks, handleComplete, handleDelete }) => {
+  return (
+    <>
+      <div className="card-body">
+        <ul className="list-group">
+          {tasks.map((task) => (
+            <TaskItem
+              key={task.id}
+              task={task}
+              handleComplete={() => handleComplete(task.id)}
+              handleDelete={() => handleDelete(task.id)}
+            />
+          ))}
+        </ul>
+      </div>
+    </>
+  );
+};
+
+export default TaskList;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function TaskItem() {
+const TaskItem = ({ task, handleComplete, handleDelete }) => {
   const [taskComplete, setTaskComplete] = useState(false);
 
   const handleStyleText = () => {
@@ -8,35 +8,39 @@ export default function TaskItem() {
   };
 
   return (
-    <>
-      <li className="list-group-item d-flex justify-content-between align-items-center">
-        <span
-          className={
-            taskComplete
-              ? "text-primary fw-normal text-decoration-line-through"
-              : "text-primary fw-normal text-decoration-normal"
-          }
+    <li className="list-group-item d-flex justify-content-between align-items-center">
+      <span
+        className={`text-primary fw-normal ${
+          taskComplete ? "text-decoration-line-through" : ""
+        }`}
+      >
+        {task.name}
+      </span>
+      <div
+        className="btn-group text-primary"
+        role="group"
+        aria-label="Basic outlined example"
+      >
+        <button
+          type="button"
+          className="btn btn-outline-primary ms-4"
+          onClick={handleComplete}
         >
-          Tarea a realizar 1
-        </span>
-        <div
-          className="btn-group text-primary"
-          role="group"
-          aria-label="Basic outlined example"
+          <i
+            className={`bi ${taskComplete ? "bi-check-square" : "bi-square"}`}
+          ></i>
+        </button>
+        <button
+          type="button"
+          className="btn btn-outline-primary ms-4"
+          onClick={handleDelete}
         >
-          <iconify-icon className="ms-4" icon="mi:edit" />
-          <iconify-icon className="ms-4" icon="material-symbols:delete" />
-          <iconify-icon
-            onClick={handleStyleText}
-            className="ms-4"
-            icon={
-              taskComplete
-                ? "mdi:checkbox-outline"
-                : "material-symbols:check-box-outline-blank-sharp"
-            }
-          />
-        </div>
-      </li>
-    </>
+          <i className="bi bi-trash"></i>
+        </button>
+        {/* Agrega otros botones si es necesario */}
+      </div>
+    </li>
   );
-}
+};
+
+export default TaskItem;
