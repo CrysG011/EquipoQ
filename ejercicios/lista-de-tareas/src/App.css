@@ -5,17 +5,22 @@
   text-align: center;
 }
 
-iconify-icon{
+body {
+  background-image: url(/assets/fondo.webp);
+  background-size: cover;
+}
+
+iconify-icon {
   display: inline-block;
   margin-left: 1em;
   font-size: 1.5em;
   cursor: pointer;
 }
 
-iconify-icon:hover{
-  color:#00398f;
+iconify-icon:hover {
+  color: #0fd784;
 }
 
-.card-body .list-group li{
-  border-left: 4px solid #0d6efd;
+.card-body .list-group li {
+  border-left: 4px solid #04422a;
 }

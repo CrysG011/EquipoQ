@@ -31,12 +31,11 @@ const TaskListComponent = () => {
 
   return (
     <>
-      <h1 className="text-primary mb-5">Lista de tareas</h1>
-
-      <main className="container">
+      <main className="container bg-gradient">
+        <h1 className="text-light fw-bold p-3">Lista de tareas</h1>
         <div className="row">
           <div className="col-10 offset-1 text-center">
-            <div className="card text-center">
+            <div className="card text-center fw-bold">
               <TaskForm addTask={addTask} />
               <TaskList
                 tasks={tasks}
