@@ -1,4 +1,25 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const TaskItemWrapper = styled.li`
+  /* Estilos para el contenedor li */
+  list-style: none;
+  /* Añadan más estilos si quieren */
+`;
+
+const TaskText = styled.span`
+  /* Estilos para el texto de la tarea */
+  color: ${(props) => (props.completed ? "gray" : "blue")};
+  /* Añadan más estilos si quieren */
+`;
+
+const TaskButton = styled.button`
+  /* Estilos para los botones */
+  background-color: white;
+  border: 1px solid blue;
+  /* Añadan más estilos si quieren */
+`;
 
 const TaskItem = ({ task, handleComplete, handleDelete }) => {
   const [taskComplete, setTaskComplete] = useState(false);
@@ -8,39 +29,32 @@ const TaskItem = ({ task, handleComplete, handleDelete }) => {
   };
 
   return (
-    <li className="list-group-item d-flex justify-content-between align-items-center">
-      <span
-        className={`text-primary fw-normal ${
-          taskComplete ? "text-decoration-line-through" : ""
-        }`}
-      >
+    <TaskItemWrapper>
+      <TaskText completed={taskComplete} onClick={handleStyleText}>
         {task.name}
-      </span>
-      <div
-        className="btn-group text-primary"
-        role="group"
-        aria-label="Basic outlined example"
-      >
-        <button
-          type="button"
-          className="btn btn-outline-primary ms-4"
-          onClick={handleComplete}
-        >
+      </TaskText>
+      <div>
+        <TaskButton onClick={handleComplete}>
           <i
             className={`bi ${taskComplete ? "bi-check-square" : "bi-square"}`}
           ></i>
-        </button>
-        <button
-          type="button"
-          className="btn btn-outline-primary ms-4"
-          onClick={handleDelete}
-        >
+        </TaskButton>
+        <TaskButton onClick={handleDelete}>
           <i className="bi bi-trash"></i>
-        </button>
-        {/* Agrega otros botones si es necesario */}
+        </TaskButton>
+        {/* Agreguen otros botones si es necesario */}
       </div>
-    </li>
+    </TaskItemWrapper>
   );
+};
+
+TaskItem.propTypes = {
+  task: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+  handleComplete: PropTypes.func.isRequired,
+  handleDelete: PropTypes.func.isRequired,
 };
 
 export default TaskItem;

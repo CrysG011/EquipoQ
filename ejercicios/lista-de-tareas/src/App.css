@@ -8,6 +8,7 @@
 body {
   background-image: url(/assets/fondo.webp);
   background-size: cover;
+  overflow: hidden;
 }
 
 iconify-icon {

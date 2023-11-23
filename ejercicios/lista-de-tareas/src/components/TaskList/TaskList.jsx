@@ -1,4 +1,5 @@
 import TaskItem from "../TaskItem/TaskItem";
+import PropTypes from "prop-types";
 
 const TaskList = ({ tasks, handleComplete, handleDelete }) => {
   return (
@@ -17,6 +18,12 @@ const TaskList = ({ tasks, handleComplete, handleDelete }) => {
       </div>
     </>
   );
+};
+// Agrego PropTypes para validar las propiedades
+TaskList.propTypes = {
+  tasks: PropTypes.array.isRequired,
+  handleComplete: PropTypes.func.isRequired,
+  handleDelete: PropTypes.func.isRequired,
 };
 
 export default TaskList;
