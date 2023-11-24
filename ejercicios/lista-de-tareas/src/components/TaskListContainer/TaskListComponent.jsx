@@ -31,18 +31,18 @@ const TaskListComponent = () => {
 
   return (
     <>
-      <main className="container bg-gradient">
+      <main className="container bg-gradient pb-5">
         <h1 className="text-light fw-bold p-3">Lista de tareas</h1>
         <div className="row">
           <div className="col-10 offset-1 text-center">
-            <div className="card text-center fw-bold">
+            <div className="card text-center fw-bold card-body-component">
               <TaskForm addTask={addTask} />
               <TaskList
                 tasks={tasks}
                 handleComplete={handleComplete}
                 handleDelete={handleDelete}
               />
-              <div className="card-footer text-primary">
+              <div className="card-footer text-white fs-5">
                 Tareas: {tasks.length}
               </div>
             </div>

@@ -5,19 +5,25 @@ import styled from "styled-components";
 const TaskItemWrapper = styled.li`
   /* Estilos para el contenedor li */
   list-style: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
   /* Añadan más estilos si quieren */
 `;
 
 const TaskText = styled.span`
   /* Estilos para el texto de la tarea */
-  color: ${(props) => (props.completed ? "gray" : "blue")};
+  text-transform: uppercase;
+  text: center;
+  align-items: center;
+  justify-content: center;
+  color: ${(props) => (props.completed ? "orange " : "white")};
   /* Añadan más estilos si quieren */
 `;
 
 const TaskButton = styled.button`
   /* Estilos para los botones */
-  background-color: white;
-  border: 1px solid blue;
+  border: none;
+
   /* Añadan más estilos si quieren */
 `;
 
@@ -34,13 +40,13 @@ const TaskItem = ({ task, handleComplete, handleDelete }) => {
         {task.name}
       </TaskText>
       <div>
-        <TaskButton onClick={handleComplete}>
-          <i
-            className={`bi ${taskComplete ? "bi-check-square" : "bi-square"}`}
-          ></i>
+        <TaskButton onClick={handleComplete} className="btn btn-success m-2">
+          <i className={`bi ${taskComplete ? "bi-check-square" : "bi-square"}`}>
+            ✓
+          </i>
         </TaskButton>
-        <TaskButton onClick={handleDelete}>
-          <i className="bi bi-trash"></i>
+        <TaskButton onClick={handleDelete} className="btn btn-danger ">
+          <i>X</i>
         </TaskButton>
         {/* Agreguen otros botones si es necesario */}
       </div>
