@@ -1,8 +1,13 @@
-# React + Vite
+# ⚛️ Ecommerce 🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Estado global con useContext y manejo de estado con useReducer
 
-Currently, two official plugins are available:
+Proyecto abierto para prácticas en equipo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Tecnologías & Herramientas:
+
+<p align="center">
+  <img src="/ejercicios/pagina-registro/public/ReactBoots.png" alt="React-Bootstrap icon" width="40" height="40"/>
+  <img src="/ejercicios/pagina-registro/public/vite.svg" alt="Vite icon" width="40" height="40"/>
+  <img src="https://user-images.githubusercontent.com/11247099/145112184-a9ff6727-661c-439d-9ada-963124a281f7.png" alt="Vitest" width="40" height="40"/>
+</p>

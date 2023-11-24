@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "ejercicios/producto_ecommerce/myapp/$1"
+    }
+  ]
+}
