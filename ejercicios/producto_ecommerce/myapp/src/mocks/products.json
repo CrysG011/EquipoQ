@@ -1,0 +1,178 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Notebook Noblex",
+      "description": "Intel Core I3-1115g4 8Gb 256Gb",
+      "price": 689,
+      "discountPercentage": 12.96,
+      "rating": 4.69,
+      "stock": 6,
+      "brand": "Noblex",
+      "category": "laptops",
+      "thumbnail": "/src/assets/notebook.jpg",
+      "images": [
+        "https://notebookscba.com.ar/wp-content/uploads/2023/08/web-nbx-i3.png",
+        "https://images.fravega.com/f500/47eba0d82ba052dfd2a9da32e668ceca.jpg",
+        "https://notebookscba.com.ar/wp-content/uploads/2023/08/WhatsApp-Image-2023-08-30-at-11.28.35-1-jpeg.webp"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Samsung Universe 9",
+      "description": "ThinkBook 15 3era Gen - Mineral Grey - Procesador AMD Ryzen™ 5 5500U (2,10 GHz hasta 4,00 GHz)- 8 GB DDR4-3200MHz (SODIMM) + 8 GB DDR4-3200MHz (soldado) - 512 GB SSD M.2 2242 PCIe TLC - Gráficos AMD Radeon™ integrados",
+      "price": 1600,
+      "discountPercentage": 15,
+      "rating": 4.09,
+      "stock": 36,
+      "brand": "Lenovo",
+      "category": "laptops",
+      "thumbnail": "https://www.lenovo.com/medias/lenovo-laptops-thinkbook-series-c-thinkbook-15-gen-2-amd-hero.png?context=bWFzdGVyfHJvb3R8MjYxNjIyfGltYWdlL3BuZ3xoYTMvaDlmLzE0MTkwNDgzMjc1ODA2LnBuZ3w0NGFkZDc1MjJhMzQyNzYyZmNiMzJhMWI5Y2U5MzcxYmM5NGZiMDEyZjhmZjg3MTY1NzBkMzdiYmNhNDBmOWQx",
+      "images": [
+        "https://www.lenovo.com/medias/lenovo-laptops-thinkbook-series-c-thinkbook-15-gen-2-amd-gallery-4.png?context=bWFzdGVyfHJvb3R8ODEzMzF8aW1hZ2UvcG5nfGhjOC9oMWMvMTExMjE1MDg0MTc1NjYucG5nfGRmMDVlZmY5M2Q2MzMwYmViYWVkYmFiNzNhOTQwOGNiYzUwODRiMTg5YjQ4Y2U1NTk3MDQyNTVkYjM4NWFjYWU",
+        "https://www.lenovo.com/medias/lenovo-laptops-thinkbook-series-c-thinkbook-15-gen-2-amd-gallery-5.png?context=bWFzdGVyfHJvb3R8NTcxMTN8aW1hZ2UvcG5nfGg1OC9oMjUvMTExMjE1MDg2MTQxNzQucG5nfDM0YzNhMTQ0NTI2YmMwNjU3OTI0NmE3NjExOGQxZTZhMjVjZGZjZWI5NzYwZTZlM2I2OGZmZDliMzJlZGFkN2I"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "iPhone X",
+      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+      "price": 899,
+      "discountPercentage": 17.94,
+      "rating": 4.44,
+      "stock": 34,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/2/1.jpg",
+        "https://i.dummyjson.com/data/products/2/2.jpg",
+        "https://i.dummyjson.com/data/products/2/3.jpg",
+        "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Samsung Universe 9",
+      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+      "price": 1249,
+      "discountPercentage": 15.46,
+      "rating": 4.09,
+      "stock": 36,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+      "images": ["https://i.dummyjson.com/data/products/3/1.jpg"]
+    },
+
+    {
+      "id": 5,
+      "title": "Huawei P30",
+      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+      "price": 499,
+      "discountPercentage": 10.58,
+      "rating": 4.09,
+      "stock": 32,
+      "brand": "Huawei",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/5/1.jpg",
+        "https://i.dummyjson.com/data/products/5/2.jpg",
+        "https://i.dummyjson.com/data/products/5/3.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "MacBook Pro",
+      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+      "price": 1749,
+      "discountPercentage": 11.02,
+      "rating": 4.57,
+      "stock": 83,
+      "brand": "Apple",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
+      "images": [
+        "https://i.dummyjson.com/data/products/6/1.png",
+        "https://i.dummyjson.com/data/products/6/2.jpg",
+        "https://i.dummyjson.com/data/products/6/3.png",
+        "https://i.dummyjson.com/data/products/6/4.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Samsung Galaxy Book",
+      "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+      "price": 1499,
+      "discountPercentage": 4.15,
+      "rating": 4.25,
+      "stock": 50,
+      "brand": "Samsung",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/7/1.jpg",
+        "https://i.dummyjson.com/data/products/7/2.jpg",
+        "https://i.dummyjson.com/data/products/7/3.jpg",
+        "https://i.dummyjson.com/data/products/7/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Acer Aspire 5 15.6",
+      "description": "FHD IPS - Delgada y ligera AMD Ryzen 7 5700U AMD Radeon Graphics retroiluminada KB Wi-Fi 6 - HDMI (16 GB de RAM | SSD de 512 GB)",
+      "price": 699,
+      "discountPercentage": 10,
+      "rating": 4.43,
+      "stock": 24,
+      "brand": "Acer",
+      "category": "laptops",
+      "thumbnail": "https://m.media-amazon.com/images/I/71VWVKZSIlL._AC_SX679_.jpg",
+      "images": [
+        "https://m.media-amazon.com/images/I/51KThlr8beL._AC_SX679_.jpg",
+        "https://m.media-amazon.com/images/I/51nT32wnyZL._AC_SX679_.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Infinix INBOOK",
+      "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
+      "price": 1099,
+      "discountPercentage": 11.83,
+      "rating": 4.54,
+      "stock": 96,
+      "brand": "Infinix",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/9/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/9/1.jpg",
+        "https://i.dummyjson.com/data/products/9/2.png",
+        "https://i.dummyjson.com/data/products/9/3.png",
+        "https://i.dummyjson.com/data/products/9/4.jpg",
+        "https://i.dummyjson.com/data/products/9/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "HP Pavilion 15-DK1056WM",
+      "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+      "price": 1099,
+      "discountPercentage": 6.18,
+      "rating": 4.43,
+      "stock": 89,
+      "brand": "HP Pavilion",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
+      "images": [
+        "https://i.dummyjson.com/data/products/10/1.jpg",
+        "https://i.dummyjson.com/data/products/10/2.jpg",
+        "https://i.dummyjson.com/data/products/10/3.jpg",
+        "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
+      ]
+    }
+  ],
+  "total": 100,
+  "skip": 0,
+  "limit": 30
+}
