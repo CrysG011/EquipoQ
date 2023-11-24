@@ -1,0 +1,49 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-image: url(/assets/fondo.webp);
+  background-size: cover;
+  overflow: hidden;
+}
+
+iconify-icon {
+  display: inline-block;
+  margin-left: 1em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+iconify-icon:hover {
+  color: #0fd784;
+}
+
+.card-body .list-group li {
+  border-left: 4px solid #04422a;
+}
+
+.bg-gradient {
+  background: rgba(0, 0, 0, 0.671);
+}
+
+.card-header {
+  background: rgb(0, 0, 80);
+}
+
+.card-body-component {
+  border: 2px solid rgb(1, 0, 65)
+}
+
+.card-body-list {
+  background: rgb(1, 0, 65);
+  border-top: 1px solid #fff;
+}
+
+.card-footer {
+  background: rgb(1, 0, 65);
+  border-top: 1px solid #fff;
+}
