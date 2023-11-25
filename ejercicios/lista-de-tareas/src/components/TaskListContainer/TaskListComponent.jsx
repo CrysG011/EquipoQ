@@ -43,7 +43,8 @@ const TaskListComponent = () => {
                 handleDelete={handleDelete}
               />
               <div className="card-footer text-white fs-5">
-                Tareas: {tasks.length}
+                Tareas: 
+                <span className="badge text-bg-primary ms-2">{tasks.length}</span>
               </div>
             </div>
           </div>

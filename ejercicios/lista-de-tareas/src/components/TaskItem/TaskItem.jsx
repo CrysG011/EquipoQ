@@ -3,28 +3,23 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const TaskItemWrapper = styled.li`
-  /* Estilos para el contenedor li */
   list-style: none;
   margin-top: 10px;
   margin-bottom: 10px;
-  /* Añadan más estilos si quieren */
 `;
 
 const TaskText = styled.span`
-  /* Estilos para el texto de la tarea */
-  text-transform: uppercase;
+  text-transform: capitalize;
   text: center;
   align-items: center;
   justify-content: center;
-  color: ${(props) => (props.completed ? "orange " : "white")};
-  /* Añadan más estilos si quieren */
+  color: ${(props) => (props.completed ? "grey" : "rgb(1, 0, 65)")};
+  text-decoration: ${(props) => (props.completed ? "line-through rgb(1, 0, 65) 2px" : "none")};
+  font-weight: 500;
 `;
 
 const TaskButton = styled.button`
-  /* Estilos para los botones */
   border: none;
-
-  /* Añadan más estilos si quieren */
 `;
 
 const TaskItem = ({ task, handleComplete, handleDelete }) => {
@@ -35,20 +30,23 @@ const TaskItem = ({ task, handleComplete, handleDelete }) => {
   };
 
   return (
-    <TaskItemWrapper>
+    <TaskItemWrapper className="list-group-item d-flex justify-content-between align-items-center shadow-sm mx-3">
       <TaskText completed={taskComplete} onClick={handleStyleText}>
         {task.name}
       </TaskText>
+      
       <div>
-        <TaskButton onClick={handleComplete} className="btn btn-success m-2">
-          <i className={`bi ${taskComplete ? "bi-check-square" : "bi-square"}`}>
-            ✓
-          </i>
+        <TaskButton onClick={handleComplete} className={ taskComplete ? "btn  btn-success p-1 m-1": "btn btn-secondary p-1 m-1 text-light"} >
+          <iconify-icon icon={taskComplete ? "material-symbols:check": "iconoir:cancel" }></iconify-icon>
         </TaskButton>
-        <TaskButton onClick={handleDelete} className="btn btn-danger ">
-          <i>X</i>
+
+        <TaskButton onClick={()=>console.log("Editar tarea")} className="btn btn-warning p-1 m-1">
+          <iconify-icon icon="grommet-icons:edit"></iconify-icon>
         </TaskButton>
-        {/* Agreguen otros botones si es necesario */}
+
+        <TaskButton onClick={handleDelete} className="btn btn-danger p-1 m-1">
+          <iconify-icon icon="material-symbols:delete"></iconify-icon>
+        </TaskButton>
       </div>
     </TaskItemWrapper>
   );
