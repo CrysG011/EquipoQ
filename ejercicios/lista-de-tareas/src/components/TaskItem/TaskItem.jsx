@@ -7,7 +7,6 @@ const TaskItemWrapper = styled.li`
   list-style: none;
   margin-top: 10px;
   margin-bottom: 10px;
-  /* Añadan más estilos si quieren */
 `;
 
 const TaskText = styled.span`
@@ -17,14 +16,10 @@ const TaskText = styled.span`
   align-items: center;
   justify-content: center;
   color: ${(props) => (props.completed ? "orange " : "white")};
-  /* Añadan más estilos si quieren */
 `;
 
 const TaskButton = styled.button`
-  /* Estilos para los botones */
   border: none;
-
-  /* Añadan más estilos si quieren */
 `;
 
 const TaskItem = ({ task, handleComplete, handleDelete }) => {

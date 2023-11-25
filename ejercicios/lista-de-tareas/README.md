@@ -1,4 +1,4 @@
-# Trabajo Práctico Integrador
+# ⚙️Trabajo Práctico Integrador 📑
 
 **Aplicación web que permite gestionar una lista de tareas utilizando**:
 
@@ -6,7 +6,7 @@
 - Hook useState para el manejo del estado.
 - Hook useEffect para realizar efectos secundarios, y eventos para interactuar con el usuario
 
-[Despleglado en Vercel](https://final-equipoq-7fju0vw6m-crysg011.vercel.app/)
+[Despleglado en Vercel](https://final-equipoq.vercel.app/)
 
 ## Ideas de implementación para mejorar la app:
 

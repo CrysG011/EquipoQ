@@ -5,10 +5,14 @@
   text-align: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url(/assets/fondo.webp);
   background-size: cover;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 iconify-icon {
