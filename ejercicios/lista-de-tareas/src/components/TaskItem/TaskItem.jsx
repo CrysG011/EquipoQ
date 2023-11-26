@@ -15,14 +15,17 @@ const TaskText = styled.span`
   text: center;
   align-items: center;
   justify-content: center;
-  color: ${(props) => (props.completed ? "orange " : "white")};
+  color: ${(props) => (props.completed ? "grey" : "rgb(1, 0, 65)")};
+  text-decoration: ${(props) =>
+    props.completed ? "line-through rgb(1, 0, 65) 2px" : "none"};
+  font-weight: 500;
 `;
 
 const TaskButton = styled.button`
   border: none;
 `;
 
-const TaskItem = ({ task, handleComplete, handleDelete }) => {
+const TaskItem = ({ task, handleComplete }) => {
   const [taskComplete, setTaskComplete] = useState(false);
 
   const handleStyleText = () => {
@@ -34,14 +37,26 @@ const TaskItem = ({ task, handleComplete, handleDelete }) => {
       <TaskText completed={taskComplete} onClick={handleStyleText}>
         {task.name}
       </TaskText>
+
       <div>
-        <TaskButton onClick={handleComplete} className="btn btn-success m-2">
-          <i className={`bi ${taskComplete ? "bi-check-square" : "bi-square"}`}>
-            ✓
-          </i>
+        <TaskButton
+          onClick={handleComplete}
+          className={
+            taskComplete
+              ? "btn  btn-success p-1 m-1"
+              : "btn btn-secondary p-1 m-1 text-light"
+          }
+        >
+          <iconify-icon
+            icon={taskComplete ? "material-symbols:check" : "iconoir:cancel"}
+          ></iconify-icon>
         </TaskButton>
-        <TaskButton onClick={handleDelete} className="btn btn-danger ">
-          <i>X</i>
+
+        <TaskButton
+          onClick={() => console.log("Editar tarea")}
+          className="btn btn-warning p-1 m-1"
+        >
+          <iconify-icon icon="grommet-icons:edit"></iconify-icon>
         </TaskButton>
         {/* Agreguen otros botones si es necesario */}
       </div>
