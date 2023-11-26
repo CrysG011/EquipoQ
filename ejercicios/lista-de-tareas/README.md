@@ -1,7 +1,5 @@
 # ⚙️Trabajo Práctico Integrador 📑
 
-# ⚙️Trabajo Práctico Integrador 📑
-
 **Aplicación web que permite gestionar una lista de tareas utilizando**:
 
 - Componentes funcionales.
