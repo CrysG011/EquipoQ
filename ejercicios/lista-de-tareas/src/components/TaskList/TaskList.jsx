@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const TaskList = ({ tasks, handleComplete, handleDelete }) => {
   return (
     <>
-      <div className="card-body"> 
+      <div className="card-body-list">
         <ul className="list-group">
           {tasks.map((task) => (
             <TaskItem

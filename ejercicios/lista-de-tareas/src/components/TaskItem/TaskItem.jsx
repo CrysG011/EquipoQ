@@ -3,19 +3,19 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const TaskItemWrapper = styled.li`
+  /* Estilos para el contenedor li */
   list-style: none;
   margin-top: 10px;
   margin-bottom: 10px;
 `;
 
 const TaskText = styled.span`
-  text-transform: capitalize;
+  /* Estilos para el texto de la tarea */
+  text-transform: uppercase;
   text: center;
   align-items: center;
   justify-content: center;
-  color: ${(props) => (props.completed ? "grey" : "rgb(1, 0, 65)")};
-  text-decoration: ${(props) => (props.completed ? "line-through rgb(1, 0, 65) 2px" : "none")};
-  font-weight: 500;
+  color: ${(props) => (props.completed ? "orange " : "white")};
 `;
 
 const TaskButton = styled.button`
@@ -30,23 +30,20 @@ const TaskItem = ({ task, handleComplete, handleDelete }) => {
   };
 
   return (
-    <TaskItemWrapper className="list-group-item d-flex justify-content-between align-items-center shadow-sm mx-3">
+    <TaskItemWrapper>
       <TaskText completed={taskComplete} onClick={handleStyleText}>
         {task.name}
       </TaskText>
-      
       <div>
-        <TaskButton onClick={handleComplete} className={ taskComplete ? "btn  btn-success p-1 m-1": "btn btn-secondary p-1 m-1 text-light"} >
-          <iconify-icon icon={taskComplete ? "material-symbols:check": "iconoir:cancel" }></iconify-icon>
+        <TaskButton onClick={handleComplete} className="btn btn-success m-2">
+          <i className={`bi ${taskComplete ? "bi-check-square" : "bi-square"}`}>
+            ✓
+          </i>
         </TaskButton>
-
-        <TaskButton onClick={()=>console.log("Editar tarea")} className="btn btn-warning p-1 m-1">
-          <iconify-icon icon="grommet-icons:edit"></iconify-icon>
+        <TaskButton onClick={handleDelete} className="btn btn-danger ">
+          <i>X</i>
         </TaskButton>
-
-        <TaskButton onClick={handleDelete} className="btn btn-danger p-1 m-1">
-          <iconify-icon icon="material-symbols:delete"></iconify-icon>
-        </TaskButton>
+        {/* Agreguen otros botones si es necesario */}
       </div>
     </TaskItemWrapper>
   );
