@@ -8,8 +8,10 @@ const TaskListComponent = () => {
   const [tasks, dispatch] = useReducer(taskReducer, storedTasks);
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-    console.log("Tasks updated:", tasks);
+    if (tasks !== undefined && tasks !== null) {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+      console.log("Tasks updated:", tasks);
+    }
   }, [tasks]);
 
   const handleComplete = (taskId) => {
@@ -43,8 +45,10 @@ const TaskListComponent = () => {
                 handleDelete={handleDelete}
               />
               <div className="card-footer text-white fs-5">
-                Tareas: 
-                <span className="badge text-bg-primary ms-2">{tasks.length}</span>
+                Tareas:
+                <span className="badge text-bg-primary ms-2">
+                  {tasks.length}
+                </span>
               </div>
             </div>
           </div>
