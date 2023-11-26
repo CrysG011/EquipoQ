@@ -6,7 +6,7 @@
 - Hook useState para el manejo del estado.
 - Hook useEffect para realizar efectos secundarios, y eventos para interactuar con el usuario
 
-[Despleglado en Vercel](https://final-equipoq.vercel.app/)
+[Despleglado en Vercel: rama **main**](https://final-equipoq.vercel.app/)
 
 ## Ideas de implementación para mejorar la app:
 
