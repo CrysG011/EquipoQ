@@ -8,8 +8,11 @@
 body {
   background-image: url(/assets/fondo.webp);
   background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
+
+.section-tareas {}
 
 iconify-icon {
   margin: 0;
@@ -48,13 +51,13 @@ iconify-icon {
 }
 
 /* Estilos TaskForm */
-.form-text{
+.form-text {
   color: red;
   font-weight: 200;
   padding-left: 2.5em;
   padding-top: .2em;
 }
 
-.alerts{
+.alerts {
   min-height: 1.5em;
 }
