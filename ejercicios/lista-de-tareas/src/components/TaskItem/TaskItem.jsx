@@ -25,40 +25,64 @@ const TaskButton = styled.button`
   border: none;
 `;
 
-const TaskItem = ({ task, handleComplete }) => {
+const TaskItem = ({ task, handleComplete, handleDelete, updateTask }) => {
   const [taskComplete, setTaskComplete] = useState(false);
+  const [editing, setEditing] = useState(false);
+  const [editedTaskName, setEditedTaskName] = useState(task.name);
 
   const handleStyleText = () => {
     setTaskComplete(!taskComplete);
   };
 
+  const handleEditClick = () => {
+    setEditing(true);
+  };
+
+  const handleSaveClick = () => {
+    updateTask(task.id, editedTaskName);
+    setEditing(false);
+  };
+
+  const handleInputChange = (e) => {
+    setEditedTaskName(e.target.value);
+  };
+
   return (
     <TaskItemWrapper>
-      <TaskText completed={taskComplete} onClick={handleStyleText}>
-        {task.name}
+      <TaskText
+        completed={taskComplete}
+        onClick={handleStyleText}
+        editing={editing}
+      >
+        {editing ? (
+          <input
+            type="text"
+            value={editedTaskName}
+            onChange={handleInputChange}
+            autoFocus
+          />
+        ) : (
+          task.name
+        )}
       </TaskText>
-
       <div>
-        <TaskButton
-          onClick={handleComplete}
-          className={
-            taskComplete
-              ? "btn  btn-success p-1 m-1"
-              : "btn btn-secondary p-1 m-1 text-light"
-          }
-        >
-          <iconify-icon
-            icon={taskComplete ? "material-symbols:check" : "iconoir:cancel"}
-          ></iconify-icon>
+        {editing ? (
+          <TaskButton onClick={handleSaveClick} className="btn btn-success m-2">
+            <i className="bi bi-check"></i>
+          </TaskButton>
+        ) : (
+          <TaskButton onClick={handleEditClick} className="btn btn-warning m-2">
+            <i className="bi bi-pencil"></i>
+          </TaskButton>
+        )}
+        <TaskButton onClick={handleComplete} className="btn btn-success m-2">
+          <i className={`bi ${taskComplete ? "bi-check-square" : "bi-square"}`}>
+            ✓
+          </i>
         </TaskButton>
-
-        <TaskButton
-          onClick={() => console.log("Editar tarea")}
-          className="btn btn-warning p-1 m-1"
-        >
-          <iconify-icon icon="grommet-icons:edit"></iconify-icon>
+        <TaskButton onClick={handleDelete} className="btn btn-danger ">
+          <i className="bi bi-trash"></i>
         </TaskButton>
-        {/* Agreguen otros botones si es necesario */}
       </div>
     </TaskItemWrapper>
   );
@@ -71,6 +95,7 @@ TaskItem.propTypes = {
   }).isRequired,
   handleComplete: PropTypes.func.isRequired,
   handleDelete: PropTypes.func.isRequired,
+  updateTask: PropTypes.func.isRequired,
 };
 
 export default TaskItem;
