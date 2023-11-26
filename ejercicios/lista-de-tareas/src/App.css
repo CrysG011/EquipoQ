@@ -12,7 +12,8 @@ html {
 body {
   background-image: url(/assets/fondo.webp);
   background-size: cover;
-  overflow-x: hidden;
+  background-position: center;
+  overflow: hidden;
 }
 
 iconify-icon {
@@ -50,4 +51,16 @@ iconify-icon:hover {
 .card-footer {
   background: rgb(1, 0, 65);
   border-top: 1px solid #fff;
+}
+
+/* Estilos TaskForm */
+.form-text {
+  color: red;
+  font-weight: 200;
+  padding-left: 2.5em;
+  padding-top: .2em;
+}
+
+.alerts {
+  min-height: 1.5em;
 }
