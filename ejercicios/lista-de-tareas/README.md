@@ -8,6 +8,8 @@
 
 [Despleglado en Vercel](https://final-equipoq-7fju0vw6m-crysg011.vercel.app/)
 
+![Portada](./public/assets/TaskPortada.png)
+
 ## Ideas de implementación para mejorar la app:
 
 - **Filtrar y Buscar Tareas**: Implementar opciones de filtrado para mostrar tareas completadas, no completadas o todas. Agregar un campo de búsqueda para permitir a los usuarios encontrar tareas específicas más fácilmente.
