@@ -9,12 +9,12 @@ export function Products({ products }) {
   };
 
   return (
-    <main className="products container text-center">
-      <ul className="align-items-center">
+    <main className="products">
+      <ul>
         {products.slice(0, 10).map((product) => {
           const isProductInCart = checkProductInCart(product);
           return (
-            <li className="col" key={product.id}>
+            <li key={product.id}>
               <img src={product.thumbnail} alt={product.title} />
               <div>
                 <strong>{product.title}</strong> - ${product.price}

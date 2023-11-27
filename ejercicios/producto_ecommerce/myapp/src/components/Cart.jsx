@@ -19,14 +19,6 @@ function CartItem({ thumbnail, price, title, quantity, addToCart }) {
   );
 }
 
-CartItem.propTypes = {
-  thumbnail: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  quantity: PropTypes.number.isRequired,
-  addToCart: PropTypes.func.isRequired,
-};
-
 export function Cart() {
   const cartCheckboxId = useId();
   const { cart, clearCart, addToCart } = useCart();
@@ -56,3 +48,10 @@ export function Cart() {
     </>
   );
 }
+CartItem.propTypes = {
+  thumbnail: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  quantity: PropTypes.number.isRequired,
+  addToCart: PropTypes.func.isRequired,
+};
