@@ -80,7 +80,14 @@ const TaskItem = ({ task, handleComplete, handleDelete, updateTask }) => {
             ✓
           </i>
         </TaskButton>
-        <TaskButton onClick={handleDelete} className="btn btn-danger ">
+        <TaskButton
+          onClick={() => {
+            if (window.confirm("¿Está seguro de eliminar la tarea?")) {
+              handleDelete();
+            }
+          }}
+          className="btn btn-danger m-2"
+        >
           <i className="bi bi-trash"></i>
         </TaskButton>
       </div>
